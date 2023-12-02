@@ -1,0 +1,159 @@
+ERROR - 2023-12-01 12:08:04 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'if_assets' in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'if_assets', 3306, '', 0)
+#1 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '(:string)')
+#6 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\app\Controllers\Departemen.php(67): CodeIgniter\BaseModel->find('(:string)')
+#7 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(927): App\Controllers\Departemen->edit('(:string)')
+#8 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departemen))
+#9 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp8.04\\ht...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'if_assets' in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '(:string)')
+#5 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\app\Controllers\Departemen.php(67): CodeIgniter\BaseModel->find('(:string)')
+#6 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(927): App\Controllers\Departemen->edit('(:string)')
+#7 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departemen))
+#8 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp8.04\\ht...')
+#11 {main}
+CRITICAL - 2023-12-01 12:08:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'if_assets'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `departemen`
+WHERE `departemen`.`kode_departemen` = :departemen.kode_departemen:', [...], false)
+ 3 SYSTEMPATH\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(true, '(:string)')
+ 5 APPPATH\Controllers\Departemen.php(67): CodeIgniter\BaseModel->find('(:string)')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Departemen->edit('(:string)')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departemen))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-01 12:08:13 --> Too few arguments to function App\Controllers\Departemen::edit(), 0 passed in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Departemen.php on line 65.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Departemen->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departemen))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-01 12:09:49 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\app\Models\DepartemenModel.php on line 25
+in SYSTEMPATH\Database\BaseBuilder.php on line 954.
+ 1 APPPATH\Models\DepartemenModel.php(25): CodeIgniter\Database\BaseBuilder->like('departemen.nama_departemen', null)
+ 2 APPPATH\Controllers\Departemen.php(21): App\Models\DepartemenModel->getDepartemen1(null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Departemen->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departemen))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-01 12:10:29 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'if_assets' in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'if_assets', 3306, '', 0)
+#1 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('mohammadahnaffa...', 'user_email', Array, NULL, 'email')
+#6 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'mohammadahnaffa...', Array, Array)
+#7 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\app\Controllers\Register.php(28): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(927): App\Controllers\Register->save()
+#10 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp8.04\\ht...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'if_assets' in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('mohammadahnaffa...', 'user_email', Array, NULL, 'email')
+#5 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'mohammadahnaffa...', Array, Array)
+#6 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\app\Controllers\Register.php(28): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(927): App\Controllers\Register->save()
+#9 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp8.04\\ht...')
+#13 {main}
+CRITICAL - 2023-12-01 12:10:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'if_assets'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `user_email` = :user_email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('mohammadahnaffauzan@gmail.com', 'user_email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'mohammadahnaffauzan@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(28): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Register->save()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-01 12:29:46 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'if_assets' in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'if_assets', 3306, '', 0)
+#1 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\app\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+#7 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(927): App\Controllers\Login->auth()
+#8 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp8.04\\ht...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'if_assets' in C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\app\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+#6 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(927): App\Controllers\Login->auth()
+#7 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp8.04\htdocs\CRUDCodeIgniter-master\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp8.04\\ht...')
+#11 {main}
+CRITICAL - 2023-12-01 12:29:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'if_assets'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user_email` = :user_email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->auth()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
